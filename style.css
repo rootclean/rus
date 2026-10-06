@@ -8,7 +8,7 @@ html, body, .reveal, .reveal .slides {
     padding: 0;
 }
 
-/* Лёгкая текстура-шум на весь слайд */
+/* Текстура-шум */
 .reveal .slides::before {
     content: "";
     position: fixed;
@@ -19,7 +19,7 @@ html, body, .reveal, .reveal .slides {
     z-index: 0;
 }
 
-/* === ШРИФТЫ (требования преподавателя) === */
+/* === ШРИФТЫ === */
 .reveal {
     font-family: 'Times New Roman', Times, serif;
     font-size: 24px;
@@ -33,61 +33,64 @@ html, body, .reveal, .reveal .slides {
 
 .reveal p, .reveal li {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 22px;
-    line-height: 1.4;
     color: #2c2c2c;
 }
 
-/* === КАРТОЧКА внутри слайда (другой оттенок бежевого) === */
+/* === КАРТОЧКА === */
 .slide-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 30px;
+    gap: 25px;
     width: 100%;
     height: 100%;
-    padding: 30px 40px;
+    padding: 25px 35px;
     box-sizing: border-box;
-    background: linear-gradient(135deg, rgba(255, 250, 240, 0.85) 0%, rgba(245, 235, 210, 0.85) 100%);
+    background: linear-gradient(135deg, rgba(255, 250, 240, 0.9) 0%, rgba(245, 235, 210, 0.9) 100%);
     border-radius: 14px;
     border: 1px solid rgba(139, 115, 85, 0.3);
     box-shadow: 0 10px 30px rgba(90, 70, 45, 0.15);
     position: relative;
     z-index: 1;
+    overflow: hidden;
 }
 
 /* === Колонки === */
 .text-col {
-    flex: 1 1 58%;
+    flex: 1 1 60%;
     text-align: left;
-    padding-right: 10px;
+    overflow: hidden;
+    max-height: 100%;
 }
 
 .text-col h2 {
-    font-size: 30px;
-    margin-bottom: 12px;
+    font-size: 28px;
+    margin: 0 0 10px 0;
     border-bottom: 2px solid #8b7355;
-    padding-bottom: 8px;
+    padding-bottom: 6px;
     display: inline-block;
 }
 
 .text-col p {
-    margin-bottom: 10px;
+    margin: 0 0 10px 0;
+    font-size: 20px;
     font-style: italic;
     color: #4a3a25;
+    line-height: 1.3;
 }
 
 .text-col ul {
     list-style: none;
     padding-left: 0;
-    margin-top: 5px;
+    margin: 0;
 }
 
 .text-col li {
-    margin-bottom: 8px;
-    padding-left: 22px;
+    margin-bottom: 6px;
+    padding-left: 20px;
     position: relative;
-    font-size: 21px;
+    font-size: 19px;
+    line-height: 1.3;
 }
 
 .text-col li::before {
@@ -99,36 +102,37 @@ html, body, .reveal, .reveal .slides {
 }
 
 .image-col {
-    flex: 0 0 38%;
+    flex: 0 0 36%;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    max-height: 100%;
 }
 
 .image-col img {
     max-width: 100%;
-    max-height: 340px;
+    max-height: 300px;
     border: 3px solid #8b7355;
     border-radius: 6px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
     background: #fff;
-    padding: 4px;
+    padding: 3px;
+    object-fit: contain;
 }
 
 /* === Титульный слайд === */
-.title-slide {
-    /* Фон задаётся через data-background-image в HTML */
-}
-
-/* Убираем карточку с титульного слайда */
 .title-slide .slide-content {
     display: none;
 }
 
 /* === Слайд с ресурсами === */
 .sources-list {
-    font-size: 22px !important;
+    font-size: 19px !important;
+}
+.sources-list li {
+    font-size: 19px !important;
+    margin-bottom: 10px;
 }
 .sources-list li::before {
     content: "🔗";
@@ -143,8 +147,8 @@ html, body, .reveal, .reveal .slides {
 }
 
 .thanks {
-    font-size: 24px;
-    margin-top: 30px;
+    font-size: 22px;
+    margin-top: 25px;
     font-style: italic;
     color: #6b5b45;
     text-align: center;

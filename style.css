@@ -1,0 +1,70 @@
+/* Настройки шрифтов под требования преподавателя */
+.reveal {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 28px; /* Базовый размер, гарантированно больше 24 */
+}
+
+.reveal h1, .reveal h2, .reveal h3 {
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: none;
+    color: #2c3e50;
+}
+
+.reveal p, .reveal li {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 28px;
+    line-height: 1.4;
+}
+
+/* Стили для картинок */
+.slide-img {
+    max-height: 400px;
+    max-width: 100%;
+    border: 2px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+/* Выравнивание текста по левому краю для списков */
+.text-left {
+    text-align: left;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/* Стили для титульного слайда */
+.title-slide h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+.title-slide h2 {
+    font-size: 34px;
+    margin-top: 0;
+    color: #34495e;
+}
+.title-slide .meta {
+    margin-top: 60px;
+    font-size: 24px;
+    text-align: right;
+    line-height: 1.6;
+    margin-right: 10%;
+}
+
+/* Стили для слайда с ресурсами */
+.sources-list {
+    font-size: 24px !important;
+}
+.sources-list a {
+    color: #2980b9;
+    text-decoration: none;
+}
+.sources-list a:hover {
+    text-decoration: underline;
+}
+.thanks {
+    font-size: 24px;
+    margin-top: 40px;
+    font-style: italic;
+    color: #7f8c8d;
+}

@@ -8,10 +8,10 @@ html, body, .reveal, .reveal .slides {
     padding: 0;
 }
 
-/* Текстура-шум */
-.reveal .slides::before {
+/* === ШУМ-ТЕКСТУРА — ТОЛЬКО НА КОНТЕНТНЫХ СЛАЙДАХ (титульный исключён) === */
+.reveal .slides section:not(.title-slide)::before {
     content: "";
-    position: fixed;
+    position: absolute;
     inset: 0;
     background-image: radial-gradient(rgba(139, 115, 85, 0.08) 1px, transparent 1px);
     background-size: 18px 18px;
@@ -121,12 +121,17 @@ html, body, .reveal, .reveal .slides {
     object-fit: contain;
 }
 
-/* === Титульный слайд === */
+/* === Титульный слайд — без карточки и без шума === */
 .title-slide .slide-content {
     display: none;
 }
 
-/* === Слайд с ресурсами === */
+/* === Слайд с ресурсами — заголовок сверху === */
+.sources-slide .slide-content {
+    align-items: flex-start;
+    padding-top: 45px;
+}
+
 .sources-list {
     font-size: 19px !important;
 }
